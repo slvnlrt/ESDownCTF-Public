@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="assets/esdown-logo.jpg" type="image/jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Produit - ESDown</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #004d87;
+            --secondary-color: #2a9d8f;
+        }
+        .notice-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .protocol-card {
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .warning-section {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="notice-header">
+            <h1 class="display-4">Nano-ImmunoComplex™</h1>
+            <p class="lead mb-0">Technologie de vectorisation lipidique de 3ème génération</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3><i class="fas fa-info-circle text-primary me-2"></i>Caractéristiques</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check me-2"></i>Targets HLA-DR4</li>
+                            <li><i class="fas fa-syringe me-2"></i>Dosage : 0.5mg/kg</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card protocol-card mb-4">
+                    <div class="card-body">
+                        <h3><i class="fas fa-clipboard-list text-primary me-2"></i>Protocole thérapeutique</h3>
+                        <ol>
+                            <li>Administration par voie sous-cutanée uniquement</li>
+                            <li>Conservation entre 2°C et 8°C</li>
+                            <li>Durée du traitement : 6 mois minimum</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card warning-section">
+                    <div class="card-body">
+                        <h3><i class="fas fa-exclamation-triangle text-warning me-2"></i>Contre-indications</h3>
+                        <ul>
+                            <li>Grossesse et allaitement</li>
+                            <li>Insuffisance hépatique sévère</li>
+                            <li>Pathologies auto-immunes actives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3><i class="fas fa-file-medical text-primary me-2"></i>Effets secondaires</h3>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" style="width: 10%">Réaction au site (10%)</div>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" style="width: 5%">Fatigue (5%)</div>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" style="width: 3%">Céphalées (3%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

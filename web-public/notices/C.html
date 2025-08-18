@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="assets/esdown-logo.jpg" type="image/jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeneTheraAllergy - ESDown</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #004d87;
+            --secondary-color: #2a9d8f;
+        }
+        .notice-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .protocol-card {
+            border-left: 4px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="notice-header">
+            <h1 class="display-4">GeneTheraAllergy</h1>
+            <p class="lead">Thérapie génique CRISPR-Cas9 pour allergies héréditaires</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4 protocol-card">
+                    <div class="card-body">
+                        <h3><i class="fas fa-dna text-primary me-2"></i>Protocole d'administration</h3>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">Extraction lymphocytaire</li>
+                            <li class="list-group-item">Édition génomique ex-vivo</li>
+                            <li class="list-group-item">Réinjection cellulaire</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3><i class="fas fa-clipboard-check text-primary me-2"></i>Suivi post-traitement</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">Contrôle J7, J30, J90</li>
+                            <li class="list-group-item">Monitoring immunologique</li>
+                            <li class="list-group-item">Évaluation génétique à 6 mois</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3><i class="fas fa-user-check text-primary me-2"></i>Critères d'éligibilité</h3>
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i>Age : 18-65 ans
+                        </div>
+                        <div class="alert alert-info">
+                            <i class="fas fa-chart-bar me-2"></i>Score ARIA > 4
+                        </div>
+                        <div class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Absence de contre-indications génétiques
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
