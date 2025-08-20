@@ -37,7 +37,7 @@
 }
 
 [data-theme="dark"] {
-    --background: linear-gradient(135deg, #2d3436 0%, #1a1a1a 100%);
+    --background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
     --text-color: #f8f9fa;
     --card-bg: #2d3436;
     --navbar-bg: rgba(45, 52, 54, 0.95);
@@ -431,12 +431,18 @@ footer::before {
 .slider:before {
     background-color: #fff;
     bottom: 4px;
-    content: "";
+    content: "\f185"; /* Font Awesome sun icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
     height: 16px;
+    width: 16px;
     left: 4px;
     position: absolute;
     transition: .4s;
-    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffc107;
 }
 
 input:checked + .slider {
@@ -445,6 +451,8 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(26px);
+    content: "\f186"; /* Font Awesome moon icon */
+    color: #fff;
 }
 
 .slider.round {
