@@ -1,5 +1,9 @@
 :root {
-    /*  Colors */
+    /* Light Theme */
+    --background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --text-color: #2d3436;
+    --card-bg: white;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
     --primary-blue: #004d87;
     --secondary-teal: #2a9d8f;
     --accent-orange: #e76f51;
@@ -32,13 +36,67 @@
     --transition-slow: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+[data-theme="dark"] {
+    --background: linear-gradient(135deg, #2d3436 0%, #1a1a1a 100%);
+    --text-color: #f8f9fa;
+    --card-bg: #2d3436;
+    --navbar-bg: rgba(45, 52, 54, 0.95);
+    --primary-blue: #2a9d8f;
+    --text-dark: #f8f9fa;
+    --light-gray: #3a3f41;
+    --white: #2d3436;
+}
+
+[data-theme="dark"] .bg-light {
+    background: linear-gradient(135deg, #3a3f41 0%, #2d3436 100%) !important;
+    border-color: rgba(255,255,255,0.1) !important;
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: var(--white) !important;
+}
+
+[data-theme="dark"] .text-muted {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="dark"] .timeline-item {
+    background: var(--card-bg);
+    border-left-color: var(--primary-blue);
+}
+
+[data-theme="dark"] .timeline-item:hover {
+    background: #3a3f41;
+}
+
+[data-theme="dark"] .navbar .nav-link {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: #3a3f41;
+    color: var(--text-color);
+}
+
 /*  Typography */
 body {
     font-family: 'Inter', system-ui, sans-serif;
-    color: var(--text-dark);
+    color: var(--text-color);
     line-height: 1.6;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -47,6 +105,10 @@ h1, h2, h3, h4, h5 {
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--primary-blue);
+}
+
+footer h5 {
+    color: var(--white);
 }
 
 .display-3 {
@@ -61,8 +123,7 @@ h1, h2, h3, h4, h5 {
 
 /*  Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, rgba(0,77,135,0.95) 0%, rgba(42,157,143,0.90) 100%),
-                url('../assets/bg.jpg') center/cover;
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.95) 0%, rgba(20, 120, 110, 0.9) 100%), url('../assets/bg.jpg') center center / cover no-repeat;
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -81,7 +142,7 @@ h1, h2, h3, h4, h5 {
 
 /*  Navigation */
 .navbar {
-    background: rgba(255, 255, 255, 0.95) !important;
+    background: var(--navbar-bg) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -98,7 +159,7 @@ h1, h2, h3, h4, h5 {
     border: none;
     border-radius: var(--border-radius);
     overflow: hidden;
-    background: white;
+    background: var(--card-bg);
     box-shadow: var(--shadow-sm);
     margin-bottom: 1.5rem;
 }
@@ -224,8 +285,11 @@ footer {
     position: relative;
     overflow: hidden;
     margin-top: auto;
-    clear: both;
     width: 100%;
+}
+
+footer .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 footer::before {
@@ -326,4 +390,58 @@ footer::before {
 
 .card:hover::before {
     left: 100%;
+}
+
+/* Theme-toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 50px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-blue);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
