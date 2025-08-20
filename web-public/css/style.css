@@ -88,6 +88,10 @@
 }
 
 /*  Typography */
+main {
+    flex: 1;
+}
+
 body {
     font-family: 'Inter', system-ui, sans-serif;
     color: var(--text-color);
