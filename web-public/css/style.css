@@ -101,6 +101,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     transition: background 0.3s ease, color 0.3s ease;
+    visibility: hidden;
+}
+
+.body-visible {
+    visibility: visible;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
