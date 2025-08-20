@@ -100,6 +100,7 @@ h1, h2, h3, h4, h5 {
     overflow: hidden;
     background: white;
     box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
 }
 
 .card:hover {
@@ -222,6 +223,9 @@ footer {
     color: white;
     position: relative;
     overflow: hidden;
+    margin-top: auto;
+    clear: both;
+    width: 100%;
 }
 
 footer::before {
